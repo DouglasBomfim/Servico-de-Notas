@@ -1,0 +1,30 @@
+<form [formGroup]="form" style="padding-top: 15px">
+    <div class="form-row">    
+        <div class="col-sm-12">
+            <label for="titulo">Titulo</label>
+            <input
+                type="text"
+                class="form-control"
+                id="titulo"
+                placeholder="titulo"
+                formControlName="titulo"
+            />
+        </div>
+    </div>
+    <div class="form-row" style="margin-top: 20px">    
+        <div class="col-sm-12">
+            <label for="texto">Texto</label>
+            <textarea
+                class="form-control"
+                rows="3"
+                id="texto"
+                placeholder="texto"
+                formControlName="texto"
+            ></textarea>
+        </div>
+    </div>    
+    <div style="margin-top: 10px">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" >Salvar</button>
+        <button type="button" class="btn btn-default" (click)="onCancel()">Cancelar</button>
+    </div>
+</form>

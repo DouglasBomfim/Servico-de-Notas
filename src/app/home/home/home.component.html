@@ -1,0 +1,37 @@
+<div class="card text-dark border-light mt-3">
+    <div class="card-header">
+        <div class="float-left">
+        <h4>Minhas Notas</h4>
+        </div>
+        <div class="float-right">
+            <div class="btn-toolbar">
+                <button type="button" class="btn btn-secondary" id="botao" [routerLink]="['addnota']">Nova Nota</button>
+                <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div>
+            <!--div class="row"-->
+            <div class="card-deck">
+                <!--div class="col-md-6" *ngFor="let obj of notas$ | async"-->
+                <div *ngFor="let obj of notas$ | async" id="cards">
+                    <div class="card mb-3" style="width: 20rem;" id="content" id="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{obj.titulo}}</h5>
+                            <!--h6 class="card-subtitle mb-2" id="card">Nota:{{obj.id}}</h6-->
+                            <div class="bar">
+                                <!--div class="emptybar"></div-->
+                                <div class="filledbar"></div>
+                            </div>
+                            <p class="card-text">{{obj.texto}}</p>
+                            <button class="btn btn-secondary" (click)="OnEdit()" id="botao">Editar</button>
+                            <button class="btn btn-secondary" (click)="OnDelete(obj)" id="botaoDel">Deletar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
