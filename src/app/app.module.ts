@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddNotaComponent } from './add-nota/add-nota.component';
+import { EditarNotaComponent } from './editar-nota/editar-nota.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AddNotaComponent
+    AddNotaComponent,
+    EditarNotaComponent
   ],
   imports: [
     BrowserModule,

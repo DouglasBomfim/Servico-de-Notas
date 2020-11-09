@@ -1,8 +1,6 @@
 import { environment } from './../../environments/environment';
-import { take } from 'rxjs/operators';
-import { Injectable, EventEmitter } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 import { Nota } from './../models/nota.model';
 
@@ -16,10 +14,6 @@ export class NoteServiceService {
   constructor(private http: HttpClient) {
   }
 
-  /*httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  }*/
-
   add(nota){
     return this.http.post(this.API, nota);
   }
@@ -28,10 +22,12 @@ export class NoteServiceService {
     return this.http.get<Nota[]>(this.API);
   }
 
+  get(id) {
+    return this.http.get(`${this.API}/${id}`);
+  }
+
   remove(id) {
-    console.log(id);
     return this.http.delete(`${this.API}/${id}`);
-    //return this.http.delete<Nota>('http://localhost:3000/notas' + '/' + id, this.httpOptions);
   }
 
   edit(nota){

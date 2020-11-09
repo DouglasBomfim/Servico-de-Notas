@@ -1,14 +1,16 @@
-#content{
+#content {
     margin-top: 2%;
 }
-#botao{
+
+#botao {
     margin-right: 1rem;
 }
-#cards{
+
+#cards {
     margin: 0 auto;
 }
 
-.card-body{
+.card-body {
     font-family: 'Open Sans', sans-serif;
 }
 

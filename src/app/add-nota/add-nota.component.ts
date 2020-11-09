@@ -29,13 +29,6 @@ export class AddNotaComponent implements OnInit {
     private location: Location) { }
 
   ngOnInit(): void {
-    //const nota = this.route.snapshot.data['addnota'];
-
-    //this.form = this.fb.group({
-    //  id: [nota.id],
-    //  titulo: [nota.titulo],
-    //  texto: [nota.texto]
-    //});
   }
 
   onSubmit(){
