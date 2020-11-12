@@ -32,9 +32,9 @@ export class EditarNotaComponent implements OnInit {
       (params: any) => {
         const id = params['id'];
         console.log(id);
-        const curso$ = this.noteservice.get(id);
+        const curso$ = this.noteservice.getById(id);
         curso$.subscribe(curso => {
-        this.setForm(curso);
+          this.setForm(curso);
         });
       }
    );
@@ -51,7 +51,6 @@ export class EditarNotaComponent implements OnInit {
   onSubmit(){
     this.submitted = true;
     this.noteservice.edit(this.form.value).subscribe(success => this.location.back());
-    console.log(this.form);
   }
 
   onCancel() {

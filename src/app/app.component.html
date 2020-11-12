@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="">
-    Annotation Service
+    Serviço de Notas
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,6 +16,13 @@
       </li>
     </ul>
   </div>
+
+  <div id="busca">
+    <img src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png" alt="Buscar..."/>
+    <input type="text" id="texto" (keyup.enter)="buscaValor(campo.value)" placeholder="Buscar por título..." #campo/>
+    <button id="botao" (click)="buscaValor(campo.value)">Buscar</button>
+  </div>
+
 </nav>
 
 <div class="container">

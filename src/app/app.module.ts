@@ -9,13 +9,15 @@ import { HomeComponent } from './home/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddNotaComponent } from './add-nota/add-nota.component';
 import { EditarNotaComponent } from './editar-nota/editar-nota.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddNotaComponent,
-    EditarNotaComponent
+    EditarNotaComponent,
+    PesquisaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+#busca{
+    background-color:#f2f7f7;
+    border:solid 2px #fafcfc;
+    border-radius:10px;
+    width:300px;
+    height:32px;
+}
+  
+#texto{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+}
+  
+#botao{
+    border:none;
+    float:left;
+    height:29px;
+    border-radius:0 7px 7px 0;
+    width:76px;
+    color: white;
+    background-color:#343a40;
+}
+
+#busca img{
+    float:left;
+    max-width:35px;
+    max-height:29px;
+}
