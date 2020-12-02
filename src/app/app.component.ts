@@ -7,13 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Servico de Notas';
 
   constructor(private router: Router){
   }
 
   buscaValor(valor){
-    this.router.navigate(['/pesquisa/'+valor]);
+    this.router.navigate(['/pesquisa'],{queryParams: {'titulo': valor}});
   }
 
 }

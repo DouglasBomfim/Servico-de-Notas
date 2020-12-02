@@ -1,7 +1,7 @@
-import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from './../../environments/environment';
 import { Nota } from './../models/nota.model';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class NoteServiceService {
   constructor(private http: HttpClient) {
   }
 
-  add(nota){
+  add(nota) {
     return this.http.post(this.API, nota);
   }
 
@@ -34,14 +34,16 @@ export class NoteServiceService {
     return this.http.delete(`${this.API}/${id}`);
   }
 
-  edit(nota){
+  edit(nota) {
     return this.http.put(`${this.API}/${nota.id}`, nota);
   }
 
-  save(nota){
-    if(nota.id)
+  save(nota) {
+    if (nota.id) {
       return this.edit(nota);
-    else
+    }
+    else {
       return this.add(nota);
+    }
   }
 }

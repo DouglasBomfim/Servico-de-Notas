@@ -1,8 +1,9 @@
-import { Observable, empty } from 'rxjs';
-import { NoteServiceService } from './../../services/note-service.service';
 import { Component, OnInit } from '@angular/core';
+
 import { catchError } from 'rxjs/operators';
 import { Nota } from 'src/app/models/nota.model';
+import { Observable, empty } from 'rxjs';
+import { NoteServiceService } from './../../services/note-service.service';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +14,9 @@ export class HomeComponent implements OnInit {
 
   notas$: Observable<Nota[]>;
 
-  constructor(private noteService : NoteServiceService) { }
+  constructor(private noteService: NoteServiceService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.onRefresh();
   }
 
@@ -26,12 +27,12 @@ export class HomeComponent implements OnInit {
         return empty();
       })
     );
-  }  
+  }
 
-  OnDelete(obj){
+  OnDelete(obj) {
     this.noteService.remove(obj.id).subscribe(() => {
       this.onRefresh();
-    });;
+    });
   }
 
 }

@@ -14,14 +14,14 @@
         <div>
             <div class="card-deck">
                 <div *ngFor="let obj of notas$ | async" id="cards">
-                    <div class="card mb-3" style="width: 20rem;" id="content" id="card">
+                    <div class="card mb-3" style="width: 20rem;" id="card">
                         <div class="card-body">
                             <h5 class="card-title">{{obj.titulo}}</h5>
                             <div class="bar">
                                 <div class="filledbar"></div>
                             </div>
                             <p class="card-text">{{obj.texto}}</p>
-                            <button class="btn btn-secondary" [routerLink]="['editarnota/'+ obj.id]" id="botao">Editar</button>
+                            <button class="btn btn-secondary" [routerLink]="['editarnota/', obj.id]" id="botao">Editar</button>
                             <button class="btn btn-secondary" (click)="OnDelete(obj)" id="botaoDel">Deletar</button>
                         </div>
                     </div>

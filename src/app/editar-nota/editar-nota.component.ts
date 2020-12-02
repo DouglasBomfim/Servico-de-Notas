@@ -1,26 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-
-import { NoteServiceService } from './../services/note-service.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
+
+import { Subscription } from 'rxjs';
+import { NoteServiceService } from './../services/note-service.service';
 
 @Component({
   selector: 'app-editar-nota',
   templateUrl: './editar-nota.component.html',
   styleUrls: ['./editar-nota.component.css']
 })
-export class EditarNotaComponent implements OnInit {
+export class EditarNotaComponent implements OnInit, OnDestroy {
 
-  form = new FormGroup(
-    {
-      id: new FormControl(''),
-      titulo: new FormControl(''),
-      texto: new FormControl('')
-    }
-  );
+  form: FormGroup;
 
-  submitted = false;
+  inscricao: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +23,14 @@ export class EditarNotaComponent implements OnInit {
     private location: Location) { }
 
   ngOnInit() {
-    this.route.params.subscribe(
+    this.form = new FormGroup(
+      {
+        id: new FormControl(null),
+        titulo: new FormControl(null, Validators.required),
+        texto: new FormControl(null, Validators.required)
+      }
+    );
+    this.inscricao = this.route.params.subscribe(
       (params: any) => {
         const id = params['id'];
         console.log(id);
@@ -40,6 +42,10 @@ export class EditarNotaComponent implements OnInit {
    );
   }
 
+  ngOnDestroy() {
+    this.inscricao.unsubscribe();
+  }
+
   setForm(curso) {
     this.form.setValue({
       id: curso.id,
@@ -48,8 +54,7 @@ export class EditarNotaComponent implements OnInit {
     });
   }
 
-  onSubmit(){
-    this.submitted = true;
+  onSubmit() {
     this.noteservice.edit(this.form.value).subscribe(success => this.location.back());
   }
 

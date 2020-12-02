@@ -1,10 +1,8 @@
-import { Component, OnInit, ɵConsole } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 
 import { NoteServiceService } from './../services/note-service.service';
-import { Nota } from './../models/nota.model';
 
 @Component({
   selector: 'app-add-nota',
@@ -13,32 +11,27 @@ import { Nota } from './../models/nota.model';
 })
 export class AddNotaComponent implements OnInit {
 
-  form = new FormGroup(
-    {
-      id: new FormControl(''),
-      titulo: new FormControl(''),
-      texto: new FormControl('')
-    }
-  );
-  submitted = false;
+  form: FormGroup;
 
   constructor(
-    private fb: FormBuilder,
-    private route: ActivatedRoute,
     private noteService: NoteServiceService,
     private location: Location) { }
 
   ngOnInit(): void {
+    this.form = new FormGroup(
+      {
+        id: new FormControl(null),
+        titulo: new FormControl(null, Validators.required),
+        texto: new FormControl(null, Validators.required)
+      }
+    );
   }
 
   onSubmit(){
-    this.submitted = true;
     this.noteService.add(this.form.value).subscribe(success => this.location.back());
-    console.log(this.form);
   }
 
   onCancel() {
-    this.submitted = false;
     this.form.reset();
   }
 

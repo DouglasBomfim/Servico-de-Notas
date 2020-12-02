@@ -1,7 +1,3 @@
-#content {
-    margin-top: 2%;
-}
-
 #botao {
     margin-right: 1rem;
 }
@@ -14,11 +10,15 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.card-header {
+    box-shadow: 10px 5px 5px #adacac;
+}
+
 #card {
     display: flex;
     background-color:white;
     border-radius: 1px;
-    box-shadow: -1rem 0 3rem #adacac;
+    box-shadow: 10px 5px 5px #adacac;
     transition: 0.4s ease-out;
     position: relative;
     left: 0px;
@@ -41,17 +41,11 @@
     width: 270px;
 }
   
-/*.emptybar {
-    background-color: #2e3033;
-    width: 100%;
-    height: 100%;
-}*/
-  
 .filledbar {
     width: 0px;
     height: 100%;
     background: rgb(0,154,217);
-    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    background: linear-gradient(90deg, rgba(192,192,192) 0%, rgba(169,169,169) 65%, rgba(128,128,128) 100%);
     transition: 0.6s ease-out;
 }
   
