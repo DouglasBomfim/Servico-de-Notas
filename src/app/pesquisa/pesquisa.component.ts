@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Subscription } from 'rxjs';
-import { NoteServiceService } from '../services/note-service.service';
+import { NoteService } from '../services/note-service.service';
 
 @Component({
   selector: 'app-pesquisa',
@@ -14,7 +14,7 @@ export class PesquisaComponent implements OnInit {
   notas$;
   inscricao: Subscription;
 
-  constructor(private route: ActivatedRoute, private noteService: NoteServiceService) { }
+  constructor(private route: ActivatedRoute, private noteService: NoteService) { }
 
   ngOnInit() {
     this.inscricao = this.route.queryParams.subscribe(

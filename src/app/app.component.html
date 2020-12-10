@@ -1,10 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" id="brand" href="">
     Serviço de Notas
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
+  <div id="busca">
+    <img src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png" alt="Buscar..."/>
+    <input type="text" id="texto" (keyup.enter)="buscaValor(campo.value)" placeholder="Buscar por título..." #campo/>
+    <button id="botao" (click)="buscaValor(campo.value)">Buscar</button>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -15,12 +21,6 @@
         <a class="nav-link" href="addnota">Criar Nota</a>
       </li>
     </ul>
-  </div>
-
-  <div id="busca">
-    <img src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png" alt="Buscar..."/>
-    <input type="text" id="texto" (keyup.enter)="buscaValor(campo.value)" placeholder="Buscar por título..." #campo/>
-    <button id="botao" (click)="buscaValor(campo.value)">Buscar</button>
   </div>
 
 </nav>

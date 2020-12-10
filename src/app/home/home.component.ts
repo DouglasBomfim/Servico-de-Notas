@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { Nota } from 'src/app/models/nota.model';
 import { Observable, empty } from 'rxjs';
-import { NoteServiceService } from './../../services/note-service.service';
+import { NoteService } from './../services/note-service.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   notas$: Observable<Nota[]>;
 
-  constructor(private noteService: NoteServiceService) { }
+  constructor(private noteService: NoteService) { }
 
   ngOnInit() {
     this.onRefresh();

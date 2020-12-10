@@ -7,7 +7,7 @@ import { Nota } from './../models/nota.model';
 @Injectable({
   providedIn: 'root'
 })
-export class NoteServiceService {
+export class NoteService {
 
   private readonly API = `${environment.API}notas`;
 
@@ -23,11 +23,11 @@ export class NoteServiceService {
   }
 
   getById(id) {
-    return this.http.get(`${this.API}/${id}`);
+    return this.http.get<Nota>(`${this.API}/${id}`);
   }
 
   getByTitle(title) {
-    return this.http.get(`${this.API}?titulo_like=${title}`);
+    return this.http.get<Nota>(`${this.API}?titulo_like=${title}`);
   }
 
   remove(id) {

@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+* {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.navbar {
+    height: 80px;
+}
+
+.navbar #brand {
+    padding-right: 240px;
+    padding-left: 110px;
+}
+
+.navbar #navbarSupportedContent {
+    padding-left: 270px;
+}
+
 #busca{
     background-color:#f2f7f7;
     border:solid 2px #fafcfc;

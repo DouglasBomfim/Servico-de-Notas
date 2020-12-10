@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+* {
+    font-family: 'Titillium Web', sans-serif;
+}
+
 #botao {
     margin-right: 1rem;
 }
@@ -6,19 +12,28 @@
     margin: 0 auto;
 }
 
-.card-body {
-    font-family: 'Open Sans', sans-serif;
+.card-header {
+    box-shadow: 5px 5px 5px #adacac;
 }
 
-.card-header {
-    box-shadow: 10px 5px 5px #adacac;
+.card-text {
+    margin-top: 20px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-body {
+    overflow-y: auto;
 }
 
 #card {
+    height: 300px;
     display: flex;
     background-color:white;
     border-radius: 1px;
-    box-shadow: 10px 5px 5px #adacac;
+    box-shadow: 5px 5px 5px #adacac;
     transition: 0.4s ease-out;
     position: relative;
     left: 0px;
