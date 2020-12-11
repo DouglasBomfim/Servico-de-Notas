@@ -9,7 +9,7 @@
         <textarea class="form-control" rows="10" id="texto" formControlName="texto"></textarea>
     </div>
     <div style="margin-top: 10px">
-        <button type="submit" [disabled]="!form.valid" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
-        <button type="button" class="btn btn-default" (click)="onCancel()">Cancelar</button>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary" id="botao" (click)="onSubmit()">Salvar</button>
+        <button type="button" class="btn btn-default" id="botao" (click)="onCancel()">Cancelar</button>
     </div>
 </form>

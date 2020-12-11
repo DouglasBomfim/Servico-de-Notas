@@ -9,10 +9,28 @@
 }
 
 .card-header {
+    background-color: #4a0072;
     box-shadow: 5px 5px 5px #adacac;
 }
 
+.float-left {
+    color: white;
+}
+
+.card-text {
+    margin-top: 20px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-body {
+    overflow-y: auto;
+}
+
 #card {
+    height: 300px;
     display: flex;
     background-color:white;
     border-radius: 1px;
@@ -43,7 +61,7 @@
     width: 0px;
     height: 100%;
     background: rgb(0,154,217);
-    background: linear-gradient(90deg, rgba(192,192,192) 0%, rgba(169,169,169) 65%, rgba(128,128,128) 100%);
+    background: linear-gradient(90deg, #ae52d4 0%, #7b1fa2 65%, #4a0072 100%);
     transition: 0.6s ease-out;
 }
   

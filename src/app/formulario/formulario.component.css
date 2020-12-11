@@ -1,13 +1,19 @@
-h2{
+h2 {
 	text-align: center;
 	padding-top: 10px;
 }
+
+#botao {
+    margin-right: 1rem;
+    background-color: #4a0072;
+	border-color: white;
+	color: white;
+}
+
 form {
 	max-width: 450px;
 	background: #FAFAFA;
 	padding: 30px;
-	margin: 50px auto;
-	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
-	border-radius: 1px;
-	border: 1px solid rgba(0, 0, 0, 0.35);
+	margin: 20px auto;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
 }

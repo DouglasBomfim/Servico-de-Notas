@@ -9,44 +9,54 @@
 }
 
 .navbar #brand {
+    color: white;
+    font-size: 20px;
     padding-right: 240px;
     padding-left: 110px;
 }
 
-.navbar #navbarSupportedContent {
-    padding-left: 270px;
+nav .navbar-nav li a {
+    color: white !important;
 }
 
-#busca{
+.navbar #navbarSupportedContent {
+    color: white;
+    padding-left: 240px;
+    font-size: 20px;
+}
+
+#busca {
     background-color:#f2f7f7;
-    border:solid 2px #fafcfc;
+    border:solid 2px #4a0072;
     border-radius:10px;
     width:300px;
-    height:32px;
+    height:42px;
 }
   
-#texto{
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-size:18px;
-    border:none;
-    height:32px;
-    width:191px;
+#texto {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
+    height: 42px;
+    width: 189px;
 }
   
-#botao{
-    border:none;
-    float:left;
-    height:29px;
-    border-radius:0 7px 7px 0;
-    width:76px;
-    color: white;
-    background-color:#343a40;
+#botao {
+    border: none;
+    float: left;
+    height: 38px;
+    border-radius: 0 7px 7px 0;
+    width: 76px;
+    color: #4a0072;
+    background-color: #d3d3d3;
 }
 
-#busca img{
-    float:left;
-    max-width:35px;
-    max-height:29px;
+#busca img {
+    float: left;
+    margin-top: 5px;
+    padding-left: 2px;
+    max-width: 35px;
+    max-height: 29px;
 }
