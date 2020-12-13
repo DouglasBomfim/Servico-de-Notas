@@ -1,25 +1,2 @@
-<div class="card text-dark border-light mt-3">
-    <div class="card-header">
-        <div class="float-left">
-            <h4>Resultado da Pesquisa</h4>
-        </div>
-    </div>
-    <div class="card-body">
-        <div>
-            <div class="card-deck">
-                <div *ngFor="let obj of notas$ | async" id="cards">
-                    <div class="card mb-3" style="width: 20rem;" id="content" id="card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{obj.titulo}}</h5>
-                            <div class="bar">
-                                <div class="filledbar"></div>
-                            </div>
-                            <p class="card-text">{{obj.texto}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<app-home queryParameter={{titulo}} header="Resultados da pesquisa"></app-home>
 

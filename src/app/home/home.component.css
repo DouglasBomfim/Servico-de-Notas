@@ -10,17 +10,18 @@
     border-color: white;
 }
 
-#cards {
-    margin: 0 auto;
-}
-
 .card-header {
     background-color: #4a0072;
     box-shadow: 5px 5px 5px #adacac;
+    color:white;
 }
 
 .float-left {
     color: white;
+}
+
+#cards {
+    margin: 0 auto;
 }
 
 .card-text {
@@ -38,7 +39,7 @@
 #card {
     height: 300px;
     display: flex;
-    background-color: white;
+    background-color:white;
     border-radius: 1px;
     box-shadow: 5px 5px 5px #adacac;
     transition: 0.4s ease-out;

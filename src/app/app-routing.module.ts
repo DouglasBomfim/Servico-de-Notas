@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'addnota', component: FormularioComponent, resolve: {nota: NotaResolver} },
   { path: 'editarnota/:id', component: FormularioComponent, resolve: {nota: NotaResolver} },
-  { path: 'pesquisa', component: PesquisaComponent}
+  { path: 'pesquisa', component: PesquisaComponent }
 ];
 
 @NgModule({

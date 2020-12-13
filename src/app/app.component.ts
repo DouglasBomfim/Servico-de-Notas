@@ -12,7 +12,7 @@ export class AppComponent {
   }
 
   buscaValor(valor){
-    this.router.navigate(['/pesquisa'],{queryParams: {'titulo': valor}});
+    this.router.navigateByUrl('pesquisa?titulo=' + valor);
   }
 
 }

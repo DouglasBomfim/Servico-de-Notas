@@ -1,7 +1,6 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Location } from '@angular/common';
 
 import { NoteService } from './../services/note-service.service';
 
@@ -20,7 +19,7 @@ export class FormularioComponent implements OnInit {
     private fb: FormBuilder,
     private noteService: NoteService,
     private route: ActivatedRoute,
-    private location: Location) { }
+    private router: Router) { }
 
   ngOnInit(): void {
 
@@ -40,7 +39,7 @@ export class FormularioComponent implements OnInit {
   }
 
   onSubmit() {
-    this.noteService.save(this.form.value).subscribe(success => this.location.back());
+    this.noteService.save(this.form.value).subscribe(success => this.router.navigateByUrl(''));
   }
 
   onCancel() {

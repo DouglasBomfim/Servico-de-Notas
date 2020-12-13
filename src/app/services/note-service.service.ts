@@ -27,7 +27,7 @@ export class NoteService {
   }
 
   getByTitle(title) {
-    return this.http.get<Nota>(`${this.API}?titulo_like=${title}`);
+    return this.http.get<Nota[]>(`${this.API}?titulo_like=${title}`);
   }
 
   remove(id) {
