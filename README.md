@@ -15,5 +15,5 @@ Com a linha de comando dentro no projeto execute:
 ng serve
 ```
 
-Após a conclusão do bundle, abra no navegador o link:
+Após a criação do bundle, abra no navegador o link:
 http://localhost:4200/
